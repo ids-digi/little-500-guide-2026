@@ -28,6 +28,61 @@ header {
   Be sure to delete empty declarations
 */
 
+.flag-container {
+	--flag-width: 1000px;
+	--pole-width: 50px;
+	--flag-height: 600px;
+	
+	position: fixed;
+	width: calc(var(--flag-width) + var(--pole-width));
+	height: 100vh;
+	top: -250px;
+
+	.flag {
+		position: relative;
+		width: calc(var(--flag-width) + var(--pole-width));
+		height: 100vh;
+
+		transform: rotateZ(50deg);
+		transform-origin: 0% 50%;
+		
+		.checkered {
+			position: absolute;
+			left: 50px;
+			top: 0;
+			
+			width: var(--flag-width);
+			height: var(--flag-height);
+			background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp7755485.jpg&f=1&nofb=1&ipt=fe59b57aa1679e9c9c9c2f820e2c1853d11571dfae7a5d754cb8ba4e8f342196');
+			background-size: cover;
+		}
+
+		.pole {
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			background-color: black;
+			height: 100vh;
+			width: var(--pole-width);
+		}
+	}
+
+}
+
+.flag-container.flagl {
+	left: 0;
+}
+
+
+.flag-container.flagr {
+	transform: rotateY(180deg);
+	right: 0;
+}
+
+
+
+
 /* 
 TYPOGRAPHY
 */
